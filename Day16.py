@@ -1,4 +1,4 @@
-def findLucky(self, arr):
+def find_lucky(arr):
         count_map = {}
         ans = -1
         for v in arr:
