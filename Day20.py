@@ -1,5 +1,13 @@
-def is_string_rotation(s1,s2):
-    if len(s2) == len(s1):
-        s1s1 = s1 + s1
-        return s2 in s1s1
+def isRotation(str1, str2):
+    if len(str1) != len(str2):
+        return False
+    #concatenate str1 to str1
+    temp = str1 + str1
+
+    #We will make use of the count in python to check if str2 can be found str1
+    if(temp.count(str2) > 0):
+        return True
+
     return False
+
+print(isRotation("waterbottle", "ewaterbottl"))
