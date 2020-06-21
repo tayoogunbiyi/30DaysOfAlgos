@@ -4,8 +4,8 @@ def isRotation(str1, str2):
     #concatenate str1 to str1
     temp = str1 + str1
 
-    #We will make use of the count in python to check if str2 can be found str1
-    if(temp.count(str2) > 0):
+    #to check if str2 can be found str1+str1
+    if str2 in temp:
         return True
 
     return False
