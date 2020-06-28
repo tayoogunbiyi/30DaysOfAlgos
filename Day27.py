@@ -1,9 +1,14 @@
-def double_step(n):
+def double_step(n,memo):
     if n <= 1:
         return 1
-    return double_step(n-1) + double_step(n-2)
+    if n in memo:
+        return memo[n]
+    memo[n] = double_step(n-1,memo) + double_step(n-2,memo)
+    return memo[n]
     
 
+for i in range(200,500):
+    print(double_step(i,{}))
 
 def double_step_2(n):
     if n == 0 or n == 1:
